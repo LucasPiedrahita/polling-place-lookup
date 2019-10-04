@@ -190,7 +190,8 @@ a:hover {
   visibility: hidden;
   position: absolute;
   font-size: 9pt;
-  background-color: #333;
+  opacity: 1;
+  background-color: rgb(30, 30, 30, 0.8);
   color: white;
   width: 150px;
   padding: 5px;
@@ -245,6 +246,11 @@ a:hover {
   color: #428bca;
 }
 
+#carousel {
+  max-width: 400px;
+  display: inline-block;
+}
+
 .wakegov-logo {
   flex: 2;
   order: 1;
@@ -259,7 +265,7 @@ a:hover {
 .footer-text {
   flex: 4;
   order: 2;
-  margin: 0 10px;
+  margin: 10px 10px 0 10px;
 }
 
 .footer-text a{
@@ -352,7 +358,7 @@ a:hover {
   }
 
   .tooltip{
-    margin-left: -135px;
+    margin-left: -128px;
   }
 
   .tooltip::after {
