@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Polling Place Lookup API 4</title>
+  <link rel="shortcut icon" href="https://maps.wakegov.com/radionuclidetesting/images/favicon.ico">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.12/esri/css/main.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="my-header">
+    <div class="container-1200 flex-center">
+      <div class="banner-text">
+  			<h2>Wake County Polling Place Lookup</h2>
+  			<span>
+          Find your polling place for Election Day <script>document.write(new Date().getFullYear());</script>
+        </span>
+  		</div>
+      <div id="voterReg" class="dropdown-container">
+        <a href="#" class="btn">
+          Voter Registration
+          <img class = "dropdown-arrow" src="./img/icon-dropdown.svg" alt="dropdown arrow">
+        </a>
+        <div id= "dropdown" class="dropdown">
+          <a class="dropdown-item" href="https://vt.ncsbe.gov/RegLkup/" target="_blank">Am I Registered?</a>
+          <a class="dropdown-item" href="http://msweb03.co.wake.nc.us/bordelec/downloads/9forms/9formslist/NCVoterRegForm.pdf" target="_blank">Register to Vote</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-95-percent">
+    <div id="searchHeaderContainer">
+      <div class="flex-center inner">
+        <div class="electoral-side btn-container">
+          <a href="https://maps.wakegov.com/elections/districts" class="btn">
+            Find your electoral disctricts
+            <img class="right-arrow" src="./img/icon-arrow-narrow.png" alt="right arrow">
+          </a>
+        </div>
+        <div class="search-side">
+          <span>Search by <strong>address</strong> to find your polling place:</span>
+          <div class="search-tool flex-center">
+            <div id="searchDiv"></div>
+            <div class="tooltip-container">
+              <img src="https://img.icons8.com/ios/50/000000/help.png">
+              <div class="tooltip">Please enter your street number and the first few letters of your street name and select your address from the list.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mapSection">
+      <div class="flex-center inner align-items-stretch">
+        <div id="resultsSection">
+          <!-- <h3>Your polling place is:</h3> -->
+          <div id="results">Pullen!</div>
+        </div>
+        <div id="viewDiv"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="my-footer">
+    <div class="container-1200 flex-center">
+      <div class="footer-text">
+				<center>
+					<p>Please refer to your voter registration information to confirm your polling place. Wake County shall not be held liable for any errors in these data.</p>
+					<p>Application developed for <a href="http://www.wakegov.com/elections/Pages/default.aspx" target="_blank"> Wake County Board of Elections</a>.</p>
+					<p>© <script>document.write(new Date().getFullYear());</script></p>
+				</center>
+			</div>
+      <div class="logo wakegov-logo">
+        <a href="http://www.wakegov.com" target="_blank">
+          <img src="https://maps.wakegov.com/elections/polling/img/wakegov.png" alt="WakeGov Logo">
+        </a>
+      </div>
+      <div class="logo wake-county-logo">
+        <a href="http://www.wakegov.com" target="_blank">
+          <img src="https://maps.wakegov.com/elections/polling/img/wake_county_logo.png" alt="Wake County Logo">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://js.arcgis.com/4.12/"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

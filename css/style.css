@@ -1,0 +1,371 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  padding: 10px 16px;
+  font-size: 18px;
+  /* line-height: 2.25; */
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.electoral-side .btn:hover {
+  background-color: #3671a4;
+}
+
+.banner-text h2 {
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.esri-popup {
+  text-align: left;
+}
+
+
+.my-header, .my-footer {
+  background-color: #2b3856;
+  color: white;
+  height: auto;
+}
+
+.my-header {
+  padding: 10px;
+}
+
+.container-1200 {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container-95-percent {
+  width: 95%;
+  max-width: calc(1200px*0.95);
+  margin: auto;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.banner-text{
+  flex: 3;
+  text-align: left;
+  margin: 0 0 10px 10px;
+}
+
+#voterReg {
+  flex: 1.1;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  background-color: white;
+  color: #333;
+  margin: 0;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 8px 16px -8px #222;
+}
+
+.dropdown-container:hover .dropdown {
+  display: flex;
+}
+
+.dropdown-container:hover .btn{
+  border-radius: 6px 6px 6px 0;
+}
+
+.dropdown-item {
+  padding: 10px;
+}
+
+.dropdown-item:hover {
+  background-color: #428bca;
+  color: white;
+}
+
+.dropdown-item:last-child:hover {
+  border-radius: inherit;
+}
+
+.dropdown-arrow {
+  height: 12px;
+}
+
+.search-side {
+  flex: auto;
+  text-align: left;
+  order: 1;
+}
+
+.electoral-side {
+  flex: initial;
+  text-align: right;
+  order: 2;
+}
+
+.right-arrow {
+  height: 15px;
+  margin-left: 5px;
+}
+
+.electoral-side .btn {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+#searchHeaderContainer, #mapSection {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#searchHeaderContainer .flex-center.inner {
+  background-color: #eee;
+  margin: 20px auto 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 8px 16px -8px #222;
+}
+
+.search-side span {
+  margin-left: 5px;
+}
+
+.search-tool {
+  justify-content: flex-start;
+}
+
+#searchDiv {
+  width: 350px;
+  border: 1px #ccc solid;
+  margin: 5px;
+}
+
+.tooltip-container img {
+  height: 20px;
+  position: relative;
+}
+
+.tooltip{
+  visibility: hidden;
+  position: absolute;
+  font-size: 9pt;
+  background-color: #333;
+  color: white;
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+  z-index: 1;
+  margin-top: 6px;
+}
+
+.tooltip::after {
+  /* This is the arrow */
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 6%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.tooltip-container:hover .tooltip{
+  visibility: visible;
+}
+
+#mapSection {
+  margin-bottom: 20px;
+}
+
+#viewDiv {
+  flex-basis: 70%;
+  order: 1;
+  height: 600px;
+  border: 1px solid #aaa;
+  margin: 0 auto;
+}
+
+#resultsSection {
+  flex-basis: 26%;
+  order: 2;
+  background-color: #d6e3ff;
+  padding: 0 10px 0 10px;
+  border: 1px solid #aaa;
+  display: none; /* Change to block once address is sumbitted */
+}
+
+.result-text {
+  font-size: 1.2em;
+}
+
+.result-text a {
+  color: #428bca;
+}
+
+.wakegov-logo {
+  flex: 2;
+  order: 1;
+}
+
+.wake-county-logo {
+  flex: 1;
+  order: 3;
+  margin: auto;
+}
+
+.footer-text {
+  flex: 4;
+  order: 2;
+  margin: 0 10px;
+}
+
+.footer-text a{
+  color: #428bca;
+}
+
+/* .logo a img {
+  height: 70px;
+} */
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 85%;
+  }
+
+  .flex-center, .electoral-side .btn {
+    display: inline-block;
+  }
+
+  .flex-center.inner {
+    width: 100%;
+    padding: 0;
+  }
+
+  #voterReg, .electoral-side, #resultsSection, .banner-text, .search-side, #viewDiv {
+    flex: none;
+    text-align: center;
+  }
+
+  .my-header {
+    padding: 0 10px 10px 10px;
+  }
+
+  .electoral-side {
+    margin: 4px auto 8px auto;
+  }
+
+  #viewDiv {
+    height: 300px;
+  }
+
+  #resultsSection {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  #searchHeaderContainer .flex-center.inner {
+    padding: 0 0 10px 0;
+  }
+
+  .search-tool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-95-percent {
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 2;
+    border-radius: 3px;
+    margin: 10px;
+  }
+
+  #voterReg .btn {
+    margin: 0;
+  }
+
+  #voterReg {
+    width: 132px;
+    text-align: left;
+  }
+
+  .dropdown-item {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .dropdown-container:hover .btn{
+    border-radius: 3px 3px 3px 0;
+  }
+
+  .dropdown-arrow {
+    height: 8px;
+  }
+
+  .tooltip{
+    margin-left: -135px;
+  }
+
+  .tooltip::after {
+    left: 91%;
+  }
+
+  .right-arrow {
+    height: 9px;
+  }
+
+  .logo {
+    padding-bottom: 20px;
+  }
+
+
+}
